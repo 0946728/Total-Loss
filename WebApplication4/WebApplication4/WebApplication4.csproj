@@ -1,0 +1,906 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E254DA90-571C-48F3-9F33-A603CA5C9526}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication4</RootNamespace>
+    <AssemblyName>WebApplication4</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="about.css" />
+    <Content Include="contact.aspx" />
+    <Content Include="contact.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="drenthe.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="flevoland.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="friesland.aspx" />
+    <Content Include="gelderland.aspx" />
+    <Content Include="geslacht_drenthe.aspx" />
+    <Content Include="geslacht_flevoland.aspx" />
+    <Content Include="geslacht_friesland.aspx" />
+    <Content Include="geslacht_gelderland.aspx" />
+    <Content Include="geslacht_groningen.aspx" />
+    <Content Include="geslacht_limburg.aspx" />
+    <Content Include="geslacht_noordbrabant.aspx" />
+    <Content Include="geslacht_noordholland.aspx" />
+    <Content Include="geslacht_overijssel.aspx" />
+    <Content Include="geslacht_utrecht.aspx" />
+    <Content Include="geslacht_zeeland.aspx" />
+    <Content Include="geslacht_zuidholland.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="groningen.aspx" />
+    <Content Include="hoofdoorzaak_drenthe.aspx" />
+    <Content Include="hoofdoorzaak_flevoland.aspx" />
+    <Content Include="hoofdoorzaak_friesland.aspx" />
+    <Content Include="hoofdoorzaak_gelderland.aspx" />
+    <Content Include="hoofdoorzaak_groningen.aspx" />
+    <Content Include="hoofdoorzaak_limburg.aspx" />
+    <Content Include="hoofdoorzaak_noordbrabant.aspx" />
+    <Content Include="hoofdoorzaak_noordholland.aspx" />
+    <Content Include="hoofdoorzaak_overijssel.aspx" />
+    <Content Include="hoofdoorzaak_utrecht.aspx" />
+    <Content Include="hoofdoorzaak_zeeland.aspx" />
+    <Content Include="hoofdoorzaak_zuidholland.aspx" />
+    <Content Include="leeftijd_drenthe.aspx" />
+    <Content Include="leeftijd_flevoland.aspx" />
+    <Content Include="leeftijd_friesland.aspx" />
+    <Content Include="leeftijd_gelderland.aspx" />
+    <Content Include="leeftijd_groningen.aspx" />
+    <Content Include="leeftijd_limburg.aspx" />
+    <Content Include="leeftijd_noordbrabant.aspx" />
+    <Content Include="leeftijd_noordholland.aspx" />
+    <Content Include="leeftijd_overijssel.aspx" />
+    <Content Include="leeftijd_utrecht.aspx" />
+    <Content Include="leeftijd_zeeland.aspx" />
+    <Content Include="leeftijd_zuidholland.aspx" />
+    <Content Include="limburg.aspx" />
+    <Content Include="merken_drenthe.aspx" />
+    <Content Include="merken_flevoland.aspx" />
+    <Content Include="merken_friesland.aspx" />
+    <Content Include="merken_gelderland.aspx" />
+    <Content Include="merken_groningen.aspx" />
+    <Content Include="merken_limburg.aspx" />
+    <Content Include="merken_noordbrabant.aspx" />
+    <Content Include="merken_noordholland.aspx" />
+    <Content Include="merken_overijssel.aspx" />
+    <Content Include="merken_utrecht.aspx" />
+    <Content Include="merken_zeeland.aspx" />
+    <Content Include="merken_zuidholland.aspx" />
+    <Content Include="nationaliteiten_drenthe.aspx" />
+    <Content Include="nationaliteiten_flevoland.aspx" />
+    <Content Include="nationaliteiten_friesland.aspx" />
+    <Content Include="nationaliteiten_gelderland.aspx" />
+    <Content Include="nationaliteiten_groningen.aspx" />
+    <Content Include="nationaliteiten_limburg.aspx" />
+    <Content Include="nationaliteiten_noordbrabant.aspx" />
+    <Content Include="nationaliteiten_noordholland.aspx" />
+    <Content Include="nationaliteiten_overijssel.aspx" />
+    <Content Include="nationaliteiten_utrecht.aspx" />
+    <Content Include="nationaliteiten_zeeland.aspx" />
+    <Content Include="nationaliteiten_zuidholland.aspx" />
+    <Content Include="noordbrabant.aspx" />
+    <Content Include="noordholland.aspx" />
+    <Content Include="overijssel.aspx" />
+    <Content Include="zeeland.aspx" />
+    <Content Include="zuidholland.aspx" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="home.css" />
+    <Content Include="index.aspx" />
+    <Content Include="manual.aspx" />
+    <Content Include="manual.css" />
+    <Content Include="provincies.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="totalloss.aspx" />
+    <Content Include="totalloss.css" />
+    <Content Include="utrecht.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="about.css.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.css.designer.cs">
+      <DependentUpon>about.css.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="drenthe.aspx.cs">
+      <DependentUpon>drenthe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="drenthe.aspx.designer.cs">
+      <DependentUpon>drenthe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="flevoland.aspx.cs">
+      <DependentUpon>flevoland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="flevoland.aspx.designer.cs">
+      <DependentUpon>flevoland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="friesland.aspx.cs">
+      <DependentUpon>friesland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="friesland.aspx.designer.cs">
+      <DependentUpon>friesland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gelderland.aspx.cs">
+      <DependentUpon>gelderland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gelderland.aspx.designer.cs">
+      <DependentUpon>gelderland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_drenthe.aspx.cs">
+      <DependentUpon>geslacht_drenthe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_drenthe.aspx.designer.cs">
+      <DependentUpon>geslacht_drenthe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_flevoland.aspx.cs">
+      <DependentUpon>geslacht_flevoland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_flevoland.aspx.designer.cs">
+      <DependentUpon>geslacht_flevoland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_friesland.aspx.cs">
+      <DependentUpon>geslacht_friesland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_friesland.aspx.designer.cs">
+      <DependentUpon>geslacht_friesland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_gelderland.aspx.cs">
+      <DependentUpon>geslacht_gelderland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_gelderland.aspx.designer.cs">
+      <DependentUpon>geslacht_gelderland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_groningen.aspx.cs">
+      <DependentUpon>geslacht_groningen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_groningen.aspx.designer.cs">
+      <DependentUpon>geslacht_groningen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_limburg.aspx.cs">
+      <DependentUpon>geslacht_limburg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_limburg.aspx.designer.cs">
+      <DependentUpon>geslacht_limburg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_noordbrabant.aspx.cs">
+      <DependentUpon>geslacht_noordbrabant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_noordbrabant.aspx.designer.cs">
+      <DependentUpon>geslacht_noordbrabant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_noordholland.aspx.cs">
+      <DependentUpon>geslacht_noordholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_noordholland.aspx.designer.cs">
+      <DependentUpon>geslacht_noordholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_overijssel.aspx.cs">
+      <DependentUpon>geslacht_overijssel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_overijssel.aspx.designer.cs">
+      <DependentUpon>geslacht_overijssel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_utrecht.aspx.cs">
+      <DependentUpon>geslacht_utrecht.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_utrecht.aspx.designer.cs">
+      <DependentUpon>geslacht_utrecht.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_zeeland.aspx.cs">
+      <DependentUpon>geslacht_zeeland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_zeeland.aspx.designer.cs">
+      <DependentUpon>geslacht_zeeland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geslacht_zuidholland.aspx.cs">
+      <DependentUpon>geslacht_zuidholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geslacht_zuidholland.aspx.designer.cs">
+      <DependentUpon>geslacht_zuidholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="groningen.aspx.cs">
+      <DependentUpon>groningen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="groningen.aspx.designer.cs">
+      <DependentUpon>groningen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.css.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.css.designer.cs">
+      <DependentUpon>home.css.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_drenthe.aspx.cs">
+      <DependentUpon>hoofdoorzaak_drenthe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_drenthe.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_drenthe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_flevoland.aspx.cs">
+      <DependentUpon>hoofdoorzaak_flevoland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_flevoland.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_flevoland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_friesland.aspx.cs">
+      <DependentUpon>hoofdoorzaak_friesland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_friesland.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_friesland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_gelderland.aspx.cs">
+      <DependentUpon>hoofdoorzaak_gelderland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_gelderland.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_gelderland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_groningen.aspx.cs">
+      <DependentUpon>hoofdoorzaak_groningen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_groningen.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_groningen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_limburg.aspx.cs">
+      <DependentUpon>hoofdoorzaak_limburg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_limburg.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_limburg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_noordbrabant.aspx.cs">
+      <DependentUpon>hoofdoorzaak_noordbrabant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_noordbrabant.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_noordbrabant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_noordholland.aspx.cs">
+      <DependentUpon>hoofdoorzaak_noordholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_noordholland.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_noordholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_overijssel.aspx.cs">
+      <DependentUpon>hoofdoorzaak_overijssel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_overijssel.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_overijssel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_utrecht.aspx.cs">
+      <DependentUpon>hoofdoorzaak_utrecht.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_utrecht.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_utrecht.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_zeeland.aspx.cs">
+      <DependentUpon>hoofdoorzaak_zeeland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_zeeland.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_zeeland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdoorzaak_zuidholland.aspx.cs">
+      <DependentUpon>hoofdoorzaak_zuidholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoofdoorzaak_zuidholland.aspx.designer.cs">
+      <DependentUpon>hoofdoorzaak_zuidholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_drenthe.aspx.cs">
+      <DependentUpon>leeftijd_drenthe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_drenthe.aspx.designer.cs">
+      <DependentUpon>leeftijd_drenthe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_flevoland.aspx.cs">
+      <DependentUpon>leeftijd_flevoland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_flevoland.aspx.designer.cs">
+      <DependentUpon>leeftijd_flevoland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_friesland.aspx.cs">
+      <DependentUpon>leeftijd_friesland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_friesland.aspx.designer.cs">
+      <DependentUpon>leeftijd_friesland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_gelderland.aspx.cs">
+      <DependentUpon>leeftijd_gelderland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_gelderland.aspx.designer.cs">
+      <DependentUpon>leeftijd_gelderland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_groningen.aspx.cs">
+      <DependentUpon>leeftijd_groningen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_groningen.aspx.designer.cs">
+      <DependentUpon>leeftijd_groningen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_limburg.aspx.cs">
+      <DependentUpon>leeftijd_limburg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_limburg.aspx.designer.cs">
+      <DependentUpon>leeftijd_limburg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_noordbrabant.aspx.cs">
+      <DependentUpon>leeftijd_noordbrabant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_noordbrabant.aspx.designer.cs">
+      <DependentUpon>leeftijd_noordbrabant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_noordholland.aspx.cs">
+      <DependentUpon>leeftijd_noordholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_noordholland.aspx.designer.cs">
+      <DependentUpon>leeftijd_noordholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_overijssel.aspx.cs">
+      <DependentUpon>leeftijd_overijssel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_overijssel.aspx.designer.cs">
+      <DependentUpon>leeftijd_overijssel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_utrecht.aspx.cs">
+      <DependentUpon>leeftijd_utrecht.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_utrecht.aspx.designer.cs">
+      <DependentUpon>leeftijd_utrecht.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_zeeland.aspx.cs">
+      <DependentUpon>leeftijd_zeeland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_zeeland.aspx.designer.cs">
+      <DependentUpon>leeftijd_zeeland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leeftijd_zuidholland.aspx.cs">
+      <DependentUpon>leeftijd_zuidholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leeftijd_zuidholland.aspx.designer.cs">
+      <DependentUpon>leeftijd_zuidholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="limburg.aspx.cs">
+      <DependentUpon>limburg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="limburg.aspx.designer.cs">
+      <DependentUpon>limburg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manual.aspx.cs">
+      <DependentUpon>manual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manual.aspx.designer.cs">
+      <DependentUpon>manual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manual.css.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manual.css.designer.cs">
+      <DependentUpon>manual.css.cs</DependentUpon>
+    </Compile>
+    <Compile Include="merken_drenthe.aspx.cs">
+      <DependentUpon>merken_drenthe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_drenthe.aspx.designer.cs">
+      <DependentUpon>merken_drenthe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_flevoland.aspx.cs">
+      <DependentUpon>merken_flevoland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_flevoland.aspx.designer.cs">
+      <DependentUpon>merken_flevoland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_friesland.aspx.cs">
+      <DependentUpon>merken_friesland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_friesland.aspx.designer.cs">
+      <DependentUpon>merken_friesland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_gelderland.aspx.cs">
+      <DependentUpon>merken_gelderland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_gelderland.aspx.designer.cs">
+      <DependentUpon>merken_gelderland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_groningen.aspx.cs">
+      <DependentUpon>merken_groningen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_groningen.aspx.designer.cs">
+      <DependentUpon>merken_groningen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_limburg.aspx.cs">
+      <DependentUpon>merken_limburg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_limburg.aspx.designer.cs">
+      <DependentUpon>merken_limburg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_noordbrabant.aspx.cs">
+      <DependentUpon>merken_noordbrabant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_noordbrabant.aspx.designer.cs">
+      <DependentUpon>merken_noordbrabant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_noordholland.aspx.cs">
+      <DependentUpon>merken_noordholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_noordholland.aspx.designer.cs">
+      <DependentUpon>merken_noordholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_overijssel.aspx.cs">
+      <DependentUpon>merken_overijssel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_overijssel.aspx.designer.cs">
+      <DependentUpon>merken_overijssel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_utrecht.aspx.cs">
+      <DependentUpon>merken_utrecht.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_utrecht.aspx.designer.cs">
+      <DependentUpon>merken_utrecht.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_zeeland.aspx.cs">
+      <DependentUpon>merken_zeeland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_zeeland.aspx.designer.cs">
+      <DependentUpon>merken_zeeland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="merken_zuidholland.aspx.cs">
+      <DependentUpon>merken_zuidholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merken_zuidholland.aspx.designer.cs">
+      <DependentUpon>merken_zuidholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_drenthe.aspx.cs">
+      <DependentUpon>nationaliteiten_drenthe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_drenthe.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_drenthe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_flevoland.aspx.cs">
+      <DependentUpon>nationaliteiten_flevoland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_flevoland.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_flevoland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_friesland.aspx.cs">
+      <DependentUpon>nationaliteiten_friesland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_friesland.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_friesland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_gelderland.aspx.cs">
+      <DependentUpon>nationaliteiten_gelderland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_gelderland.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_gelderland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_groningen.aspx.cs">
+      <DependentUpon>nationaliteiten_groningen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_groningen.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_groningen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_limburg.aspx.cs">
+      <DependentUpon>nationaliteiten_limburg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_limburg.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_limburg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_noordbrabant.aspx.cs">
+      <DependentUpon>nationaliteiten_noordbrabant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_noordbrabant.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_noordbrabant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_noordholland.aspx.cs">
+      <DependentUpon>nationaliteiten_noordholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_noordholland.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_noordholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_overijssel.aspx.cs">
+      <DependentUpon>nationaliteiten_overijssel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_overijssel.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_overijssel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_utrecht.aspx.cs">
+      <DependentUpon>nationaliteiten_utrecht.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_utrecht.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_utrecht.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_zeeland.aspx.cs">
+      <DependentUpon>nationaliteiten_zeeland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_zeeland.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_zeeland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nationaliteiten_zuidholland.aspx.cs">
+      <DependentUpon>nationaliteiten_zuidholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nationaliteiten_zuidholland.aspx.designer.cs">
+      <DependentUpon>nationaliteiten_zuidholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="noordbrabant.aspx.cs">
+      <DependentUpon>noordbrabant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="noordbrabant.aspx.designer.cs">
+      <DependentUpon>noordbrabant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="noordholland.aspx.cs">
+      <DependentUpon>noordholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="noordholland.aspx.designer.cs">
+      <DependentUpon>noordholland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="overijssel.aspx.cs">
+      <DependentUpon>overijssel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="overijssel.aspx.designer.cs">
+      <DependentUpon>overijssel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="totalloss.aspx.cs">
+      <DependentUpon>totalloss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="totalloss.aspx.designer.cs">
+      <DependentUpon>totalloss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="utrecht.aspx.cs">
+      <DependentUpon>utrecht.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="utrecht.aspx.designer.cs">
+      <DependentUpon>utrecht.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="zeeland.aspx.cs">
+      <DependentUpon>zeeland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zeeland.aspx.designer.cs">
+      <DependentUpon>zeeland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zuidholland.aspx.cs">
+      <DependentUpon>zuidholland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zuidholland.aspx.designer.cs">
+      <DependentUpon>zuidholland.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63853</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63853/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
